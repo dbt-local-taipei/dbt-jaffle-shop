@@ -1,0 +1,8 @@
+metrics: 
+  - name: "order_count"
+    description: "Sum of orders value"
+    label: "order_count"
+    type: simple
+    type_params:
+      measure:
+        name: order_count

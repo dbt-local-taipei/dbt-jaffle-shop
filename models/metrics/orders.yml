@@ -1,0 +1,21 @@
+semantic_models:
+  - name: orders
+    defaults:
+      agg_time_dimension: order_date
+    model: ref('orders')
+    entities:
+      - name: id
+        type: primary
+      - name: user_id
+        type: foreign
+    dimensions:
+      - name: status
+        type: categorical
+      - name: order_date
+        type: time
+        type_params:
+          time_granularity: day
+    measures:
+      - name: order_count
+        expr: 1
+        agg: sum
