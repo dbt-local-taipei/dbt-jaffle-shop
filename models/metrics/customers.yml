@@ -1,0 +1,11 @@
+semantic_models:
+  - name: customers
+    model: ref('customers')
+    entities:
+      - name: customer_id
+        type: primary
+    dimensions:
+      - name: first_name
+        type: categorical
+      - name: last_name
+        type: categorical
